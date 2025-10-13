@@ -1,0 +1,44 @@
+[
+  {
+    "id": "atlas-banking",
+    "name": "Atlas Banking",
+    "description": "Plataforma bancaria digital con enfoque en experiencia omnicanal y seguridad biométrica.",
+    "excerpt": "Banco digital con onboarding en 5 minutos.",
+    "technologies": ["Next.js", "NestJS", "PostgreSQL", "AWS"],
+    "role": "Arquitecta de soluciones",
+    "year": 2023,
+    "image": "/projects/atlas-banking.svg",
+    "links": {
+      "demo": "https://atlasbanking.dev",
+      "github": "https://github.com/ana/atlas-banking"
+    }
+  },
+  {
+    "id": "mentora-ai",
+    "name": "Mentora AI",
+    "description": "Aplicación SaaS para mentoría asistida por IA con dashboards en tiempo real y rutinas personalizadas.",
+    "excerpt": "Coaching ejecutivo con inteligencia artificial.",
+    "technologies": ["React", "GraphQL", "Hasura", "Vercel"],
+    "role": "Product Engineer",
+    "year": 2022,
+    "image": "/projects/mentora-ai.svg",
+    "links": {
+      "demo": "https://mentora.ai",
+      "github": "https://github.com/ana/mentora-ai"
+    }
+  },
+  {
+    "id": "circular-commerce",
+    "name": "Circular Commerce",
+    "description": "Marketplace sostenible para moda circular con logística integrada y algoritmos de recomendación.",
+    "excerpt": "E-commerce sostenible para LATAM.",
+    "technologies": ["Next.js", "Prisma", "Stripe", "Kubernetes"],
+    "role": "Tech Lead",
+    "year": 2021,
+    "image": "/projects/circular-commerce.svg",
+    "links": {
+      "demo": "https://circularcommerce.lat",
+      "github": "https://github.com/ana/circular-commerce"
+    }
+  }
+]
