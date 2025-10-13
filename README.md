@@ -30,15 +30,18 @@ Credenciales de ejemplo (cambia en producción):
 - **Contraseña:** `SuperSegura!2024`
 
 ## Variables de entorno
-Crea un archivo `.env.local` con los siguientes valores (puedes reutilizar los ejemplos):
+Crea un archivo `.env.local` (y replica los mismos valores en Render) con los siguientes valores base:
 
 ```
 ADMIN_EMAIL=admin@anarodriguez.dev
 ADMIN_PASSWORD_HASH=bd881cdf358834e8bef278a51fdfa044a967bc0fa8233032190d4fbcd8238320
 JWT_SECRET=cambia-esto-por-una-clave-segura
+SUPABASE_URL=https://tu-proyecto.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=tu-clave-service-role
 ```
 
-La contraseña se compara mediante hash SHA-256. Genera uno nuevo con `echo -n "TuPassword" | shasum -a 256`.
+- La contraseña se compara mediante hash SHA-256. Genera uno nuevo con `echo -n "TuPassword" | shasum -a 256`.
+- `SUPABASE_URL` y `SUPABASE_SERVICE_ROLE_KEY` deben corresponder al proyecto de Supabase donde residirá la base de datos.
 
 ## Estructura de carpetas
 - `app/`: rutas del sitio (públicas, blog, portafolio, admin, APIs).
@@ -49,7 +52,7 @@ La contraseña se compara mediante hash SHA-256. Genera uno nuevo con `echo -n "
 - `infra/hosting/`: guía de dominio y despliegue.
 
 ## Hosting y dominio
-Consulta `infra/hosting/README.md` para la configuración recomendada en Vercel, dominios personalizados y variables de entorno.
+Consulta `infra/hosting/README.md` para la configuración recomendada en Render, Supabase, dominios personalizados y variables de entorno.
 
 ## Pruebas
 Actualmente el proyecto no incluye pruebas automatizadas. Se recomienda integrar Playwright o Cypress para flujos críticos y Vitest para lógica de negocio.
