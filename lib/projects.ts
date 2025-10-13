@@ -15,6 +15,33 @@ interface ProjectRow {
   links: Record<string, string> | null;
 }
 
+function deserializeLinks(links: ProjectRow["links"]): Project["links"] {
+  if (!links) return {};
+
+  const projectLinks: Project["links"] = {};
+
+  if (typeof links.demo === "string" && links.demo.length > 0) {
+    projectLinks.demo = links.demo;
+  }
+
+  if (typeof links.github === "string" && links.github.length > 0) {
+    projectLinks.github = links.github;
+  }
+
+  return projectLinks;
+}
+
+function serializeLinks(links: Project["links"] | undefined): ProjectRow["links"] {
+  if (!links) return null;
+
+  const record: Record<string, string> = {};
+
+  if (links.demo) record.demo = links.demo;
+  if (links.github) record.github = links.github;
+
+  return Object.keys(record).length > 0 ? record : null;
+}
+
 function mapProject(row: ProjectRow): Project {
   return {
     id: row.id,
@@ -25,7 +52,7 @@ function mapProject(row: ProjectRow): Project {
     role: row.role,
     year: row.year,
     image: row.image,
-    links: (row.links ?? {}) as Project["links"],
+    links: deserializeLinks(row.links),
   };
 }
 
@@ -39,7 +66,7 @@ function serializeProject(project: Project): ProjectRow {
     role: project.role,
     year: project.year,
     image: project.image,
-    links: project.links ?? {},
+    links: serializeLinks(project.links),
   };
 }
 
@@ -54,7 +81,7 @@ function serializePartialProject(project: Partial<Project>): Partial<ProjectRow>
   if (project.role !== undefined) payload.role = project.role;
   if (project.year !== undefined) payload.year = project.year;
   if (project.image !== undefined) payload.image = project.image;
-  if (project.links !== undefined) payload.links = project.links ?? {};
+  if (project.links !== undefined) payload.links = serializeLinks(project.links);
   return payload;
 }
 
