@@ -1,41 +1,45 @@
-# Guía de dominio y hosting
+# Guía de despliegue en Render + Supabase
 
-Esta guía describe una configuración inicial para desplegar el portafolio y blog en **Vercel** con dominio personalizado.
+Esta guía describe cómo preparar la base de datos en **Supabase** y cómo desplegar el frontend/backoffice de Next.js en **Render**.
 
-## 1. Preparación del proyecto
-1. Crea una cuenta en [Vercel](https://vercel.com/) y conecta tu cuenta de GitHub.
-2. Crea un repositorio remoto y empuja este código (`main` o `production`).
-3. En la importación del proyecto en Vercel selecciona el repositorio y acepta los valores por defecto:
-   - Framework: `Next.js`
-   - Comando de build: `next build`
-   - Directorio de salida: `.next`
+## 1. Configuración de Supabase
+1. Crea un proyecto en [Supabase](https://supabase.com/).
+2. En la sección **SQL Editor**, ejecuta el script `infra/hosting/supabase-schema.sql` de este repositorio para crear las tablas necesarias (`posts`, `projects`, `site_stats`).
+3. Inserta un registro inicial en `site_stats` (puede hacerse desde la tabla) para evitar errores al consultar estadísticas, por ejemplo:
+   ```sql
+   insert into site_stats (id, total_visits, newsletter_subscribers, monthly)
+   values ('default', 0, 0, '[]'::jsonb)
+   on conflict (id) do nothing;
+   ```
+4. En **Project Settings → API**, copia la URL del proyecto (`Project URL`) y la `service_role key`. Se utilizarán como `SUPABASE_URL` y `SUPABASE_SERVICE_ROLE_KEY`.
+5. Opcional: crea un bucket en Supabase Storage o integra un proveedor como S3 para alojar las imágenes cargadas desde el panel, ya que el sistema de archivos de Render es efímero.
 
 ## 2. Variables de entorno
-Configura las siguientes variables en **Project Settings → Environment Variables**:
+Configura las siguientes variables tanto en tu `.env.local` como en Render (`Environment → Environment Variables`):
 
-| Variable | Descripción | Valor de ejemplo |
+| Variable | Descripción | Ejemplo |
 | --- | --- | --- |
 | `ADMIN_EMAIL` | Usuario administrador para el panel. | `admin@anarodriguez.dev` |
-| `ADMIN_PASSWORD_HASH` | Hash SHA-256 de la contraseña. Generar con `echo -n "tuPassword" | shasum -a 256`. | `bd881cdf358834e8bef278a51fdfa044a967bc0fa8233032190d4fbcd8238320` |
+| `ADMIN_PASSWORD_HASH` | Hash SHA-256 de la contraseña. Generar con `echo -n "tuPassword" \| shasum -a 256`. | `bd881cdf358834e8bef278a51fdfa044a967bc0fa8233032190d4fbcd8238320` |
 | `JWT_SECRET` | Cadena aleatoria para firmar tokens JWT. | `cambia-esto-por-una-clave-segura` |
+| `SUPABASE_URL` | URL base del proyecto Supabase. | `https://tu-proyecto.supabase.co` |
+| `SUPABASE_SERVICE_ROLE_KEY` | Clave `service_role` para ejecutar operaciones CRUD en el backend. | `eyJhbGciOiJI...` |
 
-> **Nota:** actualiza el hash con una contraseña personalizada antes de desplegar a producción.
+> **Importante:** Mantén la `service_role key` en el backend únicamente. No debe exponerse en el navegador.
 
-## 3. Configuración de dominio personalizado
-1. Compra o transfiere tu dominio en el registrador de preferencia (por ejemplo, Namecheap, Google Domains, GoDaddy).
-2. En Vercel, accede a **Project → Settings → Domains** y agrega tu dominio, por ejemplo `anarodriguez.dev`.
-3. Vercel mostrará los registros DNS que debes configurar:
-   - Registros `A` apuntando a las IP de Vercel, o
-   - Cambiar los nameservers a los proporcionados por Vercel para administración completa.
-4. Tras propagar los cambios (puede tardar hasta 24 h), verifica el dominio en Vercel y activa HTTPS automático (Let's Encrypt).
+## 3. Despliegue del frontend/backend en Render
+1. Conecta tu repositorio a Render y crea un nuevo **Web Service**.
+2. Selecciona el runtime `Node` y la región más cercana a tus usuarios.
+3. Define los comandos:
+   - **Build Command:** `npm install && npm run build`
+   - **Start Command:** `npm run start`
+4. Establece el plan como **Web Service** (Next.js funciona como SSR).
+5. Agrega las variables de entorno definidas anteriormente y despliega.
+6. Configura un dominio personalizado desde la pestaña **Custom Domains** si lo necesitas.
 
-## 4. Deploy previews y flujos recomendados
-- Usa ramas feature (`feature/*`) y pull requests. Cada PR tendrá un preview automático en Vercel.
-- Configura reglas de protección para exigir revisión antes de desplegar a producción.
-- Emplea la integración de Analytics de Vercel o conecta Google Analytics para enriquecer las métricas del panel.
+## 4. Flujos de trabajo recomendados
+- Usa ramas `feature/*` y Pull Requests. Render generará deploys previos si habilitas **Preview Environments**.
+- Automatiza copias de seguridad en Supabase y configura roles/usuarios para limitar el acceso.
+- Integra servicios externos (p. ej. Supabase Storage, Cloudinary) para almacenar imágenes de manera persistente.
 
-## 5. Automatización adicional
-- Añade [cron jobs de Vercel](https://vercel.com/docs/cron-jobs) si requieres tareas programadas, por ejemplo para recalcular estadísticas.
-- Integra servicios de almacenamiento (S3, Cloudinary) para los archivos subidos desde el panel cuando la carga de imágenes crezca.
-
-Con esta configuración tendrás un despliegue continuo, seguro y con dominio propio listo para el portafolio profesional.
+Con esta configuración tendrás la base de datos en Supabase y la aplicación (frontend + backend) ejecutándose en Render.
