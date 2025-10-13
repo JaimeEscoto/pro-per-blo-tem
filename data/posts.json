@@ -1,0 +1,24 @@
+[
+  {
+    "id": "liderazgo-tecnico-humano",
+    "title": "Liderazgo técnico con humanidad",
+    "slug": "liderazgo-tecnico-humano",
+    "excerpt": "Cómo crear entornos seguros para que los equipos experimenten y aprendan.",
+    "content": "<p>El liderazgo técnico no se trata solo de definir arquitecturas. Implica acompañar el crecimiento del equipo, cultivar la curiosidad y reconocer el esfuerzo. Comparto prácticas que he aplicado en los últimos años para balancear foco técnico con bienestar emocional.</p>",
+    "coverImage": "/blog/liderazgo.svg",
+    "publishedAt": "2024-05-24",
+    "tags": ["liderazgo", "cultura", "equipo"],
+    "readingTime": 6
+  },
+  {
+    "id": "guia-design-systems-2024",
+    "title": "Guía práctica para design systems en 2024",
+    "slug": "guia-design-systems-2024",
+    "excerpt": "Lecciones aprendidas construyendo sistemas de diseño mantenibles.",
+    "content": "<p>Los design systems siguen evolucionando. En este artículo abordo cómo establecer un modelo de gobierno, mantener la documentación viva y medir el impacto en equipos distribuidos.</p>",
+    "coverImage": "/blog/design-systems.svg",
+    "publishedAt": "2024-04-10",
+    "tags": ["design systems", "frontend"],
+    "readingTime": 8
+  }
+]

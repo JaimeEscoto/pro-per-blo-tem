@@ -1,0 +1,10 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="atlas" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#312e81" />
+      <stop offset="100%" stop-color="#5b21b6" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#atlas)" />
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="72" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif">Atlas Banking</text>
+</svg>

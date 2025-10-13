@@ -1,0 +1,12 @@
+{
+  "totalVisits": 18456,
+  "newsletterSubscribers": 1280,
+  "monthly": [
+    { "month": "Enero", "visits": 1200 },
+    { "month": "Febrero", "visits": 1560 },
+    { "month": "Marzo", "visits": 1800 },
+    { "month": "Abril", "visits": 2100 },
+    { "month": "Mayo", "visits": 2320 },
+    { "month": "Junio", "visits": 2600 }
+  ]
+}
