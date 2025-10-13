@@ -14,7 +14,7 @@ export default function Contact() {
   const [status, setStatus] = useState<string | null>(null);
 
   const onSubmit = (data: ContactForm) => {
-    setStatus("¡Gracias por tu mensaje! Te responderé en menos de 48 horas.");
+    setStatus("¡Gracias por tu mensaje! Te responderé en menos de 24 horas hábiles.");
     console.info("Mensaje de contacto", data);
     reset();
   };
@@ -23,15 +23,18 @@ export default function Contact() {
     <section id="contacto" className="section-container">
       <div className="grid gap-10 rounded-3xl bg-gradient-to-br from-primary-600 via-primary-500 to-primary-700 p-10 text-white md:grid-cols-[1fr_1.1fr]">
         <div className="space-y-6">
-          <h2 className="text-3xl font-semibold">Construyamos algo extraordinario</h2>
+          <h2 className="text-3xl font-semibold">Conversemos sobre tu proceso</h2>
           <p className="text-lg text-white/80">
-            Agenda una sesión estratégica para revisar tu producto, preparar una auditoría técnica o escalar tu equipo de ingeniería.
+            Agenda una entrevista inicial para explorar necesidades terapéuticas, solicitar una evaluación psicodiagnóstica o coordinar una actividad psicoeducativa.
           </p>
           <ul className="space-y-3 text-white/80">
-            <li>· Mentorías personalizadas para líderes técnicos</li>
-            <li>· Auditorías de arquitectura y performance</li>
-            <li>· Diseño y lanzamiento de MVP en 6 semanas</li>
+            <li>· Psicoterapia individual para adolescentes y adultos</li>
+            <li>· Evaluaciones clínicas y elaboración de informes especializados</li>
+            <li>· Talleres y conferencias sobre salud mental y cultura afectiva</li>
           </ul>
+          <p className="text-xs text-white/70">
+            Este formulario no sustituye la atención de emergencia. Si atraviesas una crisis, comunícate con los servicios de urgencia de tu localidad.
+          </p>
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           <div>
@@ -44,7 +47,13 @@ export default function Contact() {
           </div>
           <div>
             <label htmlFor="message">Mensaje</label>
-            <textarea id="message" rows={4} {...register("message", { required: true })} placeholder="Cuéntame sobre tu proyecto" className="resize-none text-slate-900" />
+            <textarea
+              id="message"
+              rows={4}
+              {...register("message", { required: true })}
+              placeholder="Cuéntame cómo puedo acompañarte"
+              className="resize-none text-slate-900"
+            />
           </div>
           <button type="submit" className="btn-primary">
             Enviar mensaje

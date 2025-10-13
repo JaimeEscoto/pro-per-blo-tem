@@ -1,24 +1,24 @@
 [
   {
-    "id": "liderazgo-tecnico-humano",
-    "title": "Liderazgo técnico con humanidad",
-    "slug": "liderazgo-tecnico-humano",
-    "excerpt": "Cómo crear entornos seguros para que los equipos experimenten y aprendan.",
-    "content": "<p>El liderazgo técnico no se trata solo de definir arquitecturas. Implica acompañar el crecimiento del equipo, cultivar la curiosidad y reconocer el esfuerzo. Comparto prácticas que he aplicado en los últimos años para balancear foco técnico con bienestar emocional.</p>",
+    "id": "escucha-psicoanalitica-adolescentes",
+    "title": "Escucha psicoanalítica con adolescentes",
+    "slug": "escucha-psicoanalitica-adolescentes",
+    "excerpt": "Claves para habilitar la palabra juvenil y sostener la transferencia en contextos escolares.",
+    "content": "<p>Compartir la consulta con adolescentes implica leer los signos de la época: hiperconexión, exigencias de rendimiento y búsquedas de reconocimiento. Propongo dispositivos flexibles que integran entrevistas individuales, espacios grupales y trabajo con familias para construir confianza.</p>",
     "coverImage": "/blog/liderazgo.svg",
     "publishedAt": "2024-05-24",
-    "tags": ["liderazgo", "cultura", "equipo"],
-    "readingTime": 6
+    "tags": ["psicoterapia", "adolescentes", "psicoanalisis"],
+    "readingTime": 7
   },
   {
-    "id": "guia-design-systems-2024",
-    "title": "Guía práctica para design systems en 2024",
-    "slug": "guia-design-systems-2024",
-    "excerpt": "Lecciones aprendidas construyendo sistemas de diseño mantenibles.",
-    "content": "<p>Los design systems siguen evolucionando. En este artículo abordo cómo establecer un modelo de gobierno, mantener la documentación viva y medir el impacto en equipos distribuidos.</p>",
+    "id": "subjetividad-y-cultura-popular",
+    "title": "Subjetividad y cultura popular latinoamericana",
+    "slug": "subjetividad-y-cultura-popular",
+    "excerpt": "Cómo las narrativas musicales influyen en la elaboración afectiva colectiva.",
+    "content": "<p>El análisis de letras y performances musicales revela modos singulares de tramitar el duelo, el deseo y la esperanza. Exploro ejemplos recientes de la cultura hondureña y propongo preguntas para el trabajo clínico y comunitario.</p>",
     "coverImage": "/blog/design-systems.svg",
-    "publishedAt": "2024-04-10",
-    "tags": ["design systems", "frontend"],
-    "readingTime": 8
+    "publishedAt": "2024-03-18",
+    "tags": ["cultura", "investigacion", "salud mental"],
+    "readingTime": 6
   }
 ]

@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
     return { title: "Proyecto no encontrado" };
   }
   return {
-    title: `${project.name} | Portafolio de Ana Rodríguez`,
+    title: `${project.name} | Práctica de Paola Madrid`,
     description: project.description
   };
 }
@@ -47,19 +47,19 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <div className="flex gap-4 text-sm">
           {details.links.demo && (
             <a href={details.links.demo} target="_blank" rel="noopener noreferrer" className="btn-primary">
-              Ver demo
+              Ver recurso
             </a>
           )}
           {details.links.github && (
             <a href={details.links.github} target="_blank" rel="noopener noreferrer" className="btn-secondary">
-              Ver código
+              Material complementario
             </a>
           )}
         </div>
       </div>
       <div>
         <Link href="/portfolio" className="inline-flex items-center gap-2 text-sm font-semibold text-primary-500 hover:text-primary-400">
-          ← Volver al portafolio
+          ← Volver a las líneas de trabajo
         </Link>
       </div>
       <div className="relative h-96 w-full overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-800">
@@ -69,18 +69,18 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <div className="space-y-4 rounded-3xl bg-white/80 p-8 shadow-lg shadow-primary-500/10 ring-1 ring-slate-200/60 backdrop-blur dark:bg-slate-900/60 dark:ring-slate-800/60">
           <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">Impacto</h2>
           <p className="text-sm text-slate-600 dark:text-slate-300">
-            Este proyecto generó un aumento del 35% en retención de usuarios y aceleró la entrega de nuevas funcionalidades gracias a una arquitectura modular.
+            Sistematizo indicadores cualitativos y cuantitativos para evaluar cambios en bienestar emocional, adherencia terapéutica y construcción de redes de apoyo.
           </p>
           <p className="text-sm text-slate-600 dark:text-slate-300">
-            Implementé métricas de observabilidad, pipelines CI/CD y entrenamiento de equipo para garantizar la sostenibilidad del producto.
+            Cada intervención deriva en recomendaciones concretas para familias, instituciones y equipos clínicos aliados.
           </p>
         </div>
         <div className="space-y-4 rounded-3xl bg-white/80 p-8 shadow-lg shadow-primary-500/10 ring-1 ring-slate-200/60 backdrop-blur dark:bg-slate-900/60 dark:ring-slate-800/60">
-          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">Servicios</h2>
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">Intervenciones</h2>
           <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-300">
-            <li>· Descubrimiento de producto y priorización de roadmap.</li>
-            <li>· Diseño de arquitectura cloud nativa y seguridad.</li>
-            <li>· Facilitación de talleres con stakeholders y equipo técnico.</li>
+            <li>· Entrevistas clínicas, aplicación de pruebas y devoluciones personalizadas.</li>
+            <li>· Diseño de dispositivos grupales y talleres psicoeducativos.</li>
+            <li>· Articulación con redes institucionales para sostener el proceso terapéutico.</li>
           </ul>
         </div>
       </section>

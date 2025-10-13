@@ -8,8 +8,9 @@ import Footer from "@/components/sections/footer";
 const font = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-display" });
 
 export const metadata: Metadata = {
-  title: "Portafolio Profesional | Blog",
-  description: "Portafolio moderno, blog y panel de administración para un profesional del sector tecnológico.",
+  title: "Consulta Psicológica | Blog",
+  description:
+    "Portal profesional de Paola Marielle Madrid Leiva: psicoterapia, investigación psicoanalítica y recursos de salud mental.",
   metadataBase: new URL("https://example.com")
 };
 

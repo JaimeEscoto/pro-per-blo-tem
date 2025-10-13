@@ -7,13 +7,13 @@ export default function PortfolioShowcase({ projects }: { projects: Project[] })
     <section id="portafolio" className="section-container space-y-10">
       <div className="flex flex-col gap-4 text-center md:flex-row md:items-end md:justify-between md:text-left">
         <div>
-          <h2 className="text-3xl font-semibold text-slate-900 dark:text-white">Proyectos destacados</h2>
+          <h2 className="text-3xl font-semibold text-slate-900 dark:text-white">Líneas de trabajo destacadas</h2>
           <p className="text-slate-600 dark:text-slate-300">
-            Soluciones diseñadas de principio a fin, desde discovery hasta escalamiento.
+            Iniciativas clínicas y de investigación que articulan escucha, análisis cultural y producción de conocimiento.
           </p>
         </div>
         <Link href="/portfolio" className="btn-secondary self-center md:self-end">
-          Ver todos los proyectos
+          Ver todas las colaboraciones
         </Link>
       </div>
       <div className="grid gap-8 md:grid-cols-3">
@@ -42,12 +42,12 @@ export default function PortfolioShowcase({ projects }: { projects: Project[] })
                 </Link>
                 {project.links.demo && (
                   <Link href={project.links.demo} target="_blank" className="font-semibold">
-                    Demo
+                    Recurso
                   </Link>
                 )}
                 {project.links.github && (
                   <Link href={project.links.github} target="_blank" className="font-semibold">
-                    Código
+                    Material
                   </Link>
                 )}
               </div>

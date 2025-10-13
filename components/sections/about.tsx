@@ -3,23 +3,23 @@ import Timeline from "@/components/sections/timeline";
 const milestones = [
   {
     year: "2024",
-    title: "CTO Freelance",
-    description: "Acompaño a startups serie A en decisiones estratégicas de arquitectura y gobernanza tecnológica."
+    title: "Consulta privada en Tegucigalpa",
+    description: "Acompaño procesos terapéuticos para adolescentes y adultos, integrando perspectiva psicoanalítica y trabajo interdisciplinario."
   },
   {
-    year: "2021",
-    title: "Líder de Ingeniería · TechWave",
-    description: "Escalé el equipo de 6 a 32 personas, migré la plataforma a microfrontends y reduje el time-to-market un 45%."
+    year: "2022",
+    title: "Investigadora asociada · UNAH",
+    description: "Coordiné estudios sobre salud mental juvenil y dinámicas afectivas en comunidades educativas hondureñas."
   },
   {
-    year: "2017",
-    title: "Senior Software Engineer · DataCore",
-    description: "Implementé pipelines de datos en tiempo real y contribuí a modelos predictivos para fintechs regionales."
+    year: "2019",
+    title: "Psicóloga clínica comunitaria",
+    description: "Desarrollé dispositivos grupales para organizaciones culturales y programas de prevención en Centroamérica."
   },
   {
-    year: "2013",
-    title: "Consultora independiente",
-    description: "Primeros proyectos full-stack para organizaciones sin fines de lucro y pymes en LATAM."
+    year: "2015",
+    title: "Licenciatura en Psicología · UNAH",
+    description: "Graduada con méritos académicos, enfocada en psicodiagnóstico, subjetividad contemporánea y neurosis compulsiva."
   }
 ];
 
@@ -29,10 +29,10 @@ export default function About() {
       <div className="space-y-6">
         <h2 className="text-3xl font-semibold text-slate-900 dark:text-white">Sobre mí</h2>
         <p className="text-lg text-slate-600 dark:text-slate-300">
-          Mi enfoque combina investigación con ejecución ágil. Creo en los equipos autónomos, en la transparencia como valor y en el aprendizaje continuo como ventaja competitiva. Cuando no estoy programando, mentorizo a nuevas generaciones en comunidades tecnológicas y escribo sobre liderazgo inclusivo.
+          Me especializo en el análisis de las transformaciones subjetivas contemporáneas. Articulo herramientas de la clínica psicoanalítica con metodologías de investigación para construir intervenciones sensibles al contexto cultural latinoamericano.
         </p>
         <p className="text-lg text-slate-600 dark:text-slate-300">
-          Actualmente resido en Ciudad de México y colaboro de forma remota con empresas globales. Domino español, inglés y portugués.
+          He publicado artículos sobre psicodiagnóstico, salud mental en adolescentes y dinámicas afectivas populares. Mi práctica busca un equilibrio entre la rigurosidad científica y una escucha cercana que habilite nuevos sentidos para cada persona.
         </p>
       </div>
       <div>

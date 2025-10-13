@@ -1,44 +1,42 @@
 [
   {
-    "id": "atlas-banking",
-    "name": "Atlas Banking",
-    "description": "Plataforma bancaria digital con enfoque en experiencia omnicanal y seguridad biométrica.",
-    "excerpt": "Banco digital con onboarding en 5 minutos.",
-    "technologies": ["Next.js", "NestJS", "PostgreSQL", "AWS"],
-    "role": "Arquitecta de soluciones",
-    "year": 2023,
+    "id": "salud-mental-adolescentes",
+    "name": "Programa de salud mental adolescente UNAH",
+    "description": "Diseño e implementación de dispositivos clínicos y psicoeducativos para acompañar a estudiantes de secundaria en Tegucigalpa.",
+    "excerpt": "Clínica itinerante con seguimiento familiar y comunitario.",
+    "technologies": ["Psicodiagnóstico", "Intervención grupal", "Coordinación institucional"],
+    "role": "Coordinadora clínica",
+    "year": 2024,
     "image": "/projects/atlas-banking.svg",
     "links": {
-      "demo": "https://atlasbanking.dev",
-      "github": "https://github.com/ana/atlas-banking"
+      "demo": "https://www.unah.edu.hn/programas-salud-mental"
     }
   },
   {
-    "id": "mentora-ai",
-    "name": "Mentora AI",
-    "description": "Aplicación SaaS para mentoría asistida por IA con dashboards en tiempo real y rutinas personalizadas.",
-    "excerpt": "Coaching ejecutivo con inteligencia artificial.",
-    "technologies": ["React", "GraphQL", "Hasura", "Vercel"],
-    "role": "Product Engineer",
-    "year": 2022,
+    "id": "subjetividad-contemporanea",
+    "name": "Investigación sobre subjetividad contemporánea",
+    "description": "Estudio cualitativo sobre la construcción de identidad en jóvenes hondureños desde el psicoanálisis y los estudios culturales.",
+    "excerpt": "Publicación regional sobre narrativas juveniles y cuidado psíquico.",
+    "technologies": ["Entrevistas en profundidad", "Análisis discursivo", "Psicoanálisis"],
+    "role": "Investigadora principal",
+    "year": 2023,
     "image": "/projects/mentora-ai.svg",
     "links": {
-      "demo": "https://mentora.ai",
-      "github": "https://github.com/ana/mentora-ai"
+      "demo": "https://revistapsicologia.lat/subjetividad-contemporanea.pdf"
     }
   },
   {
-    "id": "circular-commerce",
-    "name": "Circular Commerce",
-    "description": "Marketplace sostenible para moda circular con logística integrada y algoritmos de recomendación.",
-    "excerpt": "E-commerce sostenible para LATAM.",
-    "technologies": ["Next.js", "Prisma", "Stripe", "Kubernetes"],
-    "role": "Tech Lead",
-    "year": 2021,
+    "id": "dinamicas-afectivas",
+    "name": "Dinámicas afectivas en cultura popular",
+    "description": "Análisis psicoanalítico de expresiones musicales latinoamericanas para comprender vínculos afectivos y representaciones del deseo colectivo.",
+    "excerpt": "Ensayo clínico-cultural con recomendaciones para dispositivos de escucha comunitaria.",
+    "technologies": ["Psicoanálisis", "Etnografía", "Divulgación académica"],
+    "role": "Autora",
+    "year": 2022,
     "image": "/projects/circular-commerce.svg",
     "links": {
-      "demo": "https://circularcommerce.lat",
-      "github": "https://github.com/ana/circular-commerce"
+      "demo": "https://culturaypsicoanalisis.org/dinamicas-afectivas.pdf",
+      "github": "https://drive.google.com/paola-madrid-materiales"
     }
   }
 ]

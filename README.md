@@ -26,14 +26,14 @@ npm run dev
 El panel de administración está disponible en `http://localhost:3000/admin/login`.
 
 Credenciales de ejemplo (cambia en producción):
-- **Correo:** `admin@anarodriguez.dev`
+- **Correo:** `admin@paolamadridpsicologia.com`
 - **Contraseña:** `SuperSegura!2024`
 
 ## Variables de entorno
 Crea un archivo `.env.local` (y replica los mismos valores en Render) con los siguientes valores base:
 
 ```
-ADMIN_EMAIL=admin@anarodriguez.dev
+ADMIN_EMAIL=admin@paolamadridpsicologia.com
 ADMIN_PASSWORD_HASH=bd881cdf358834e8bef278a51fdfa044a967bc0fa8233032190d4fbcd8238320
 JWT_SECRET=cambia-esto-por-una-clave-segura
 SUPABASE_URL=https://tu-proyecto.supabase.co

@@ -1,25 +1,29 @@
-import { Code2, Database, Layers3, Sparkles } from "lucide-react";
+import { Brain, ClipboardList, BookOpen, Users } from "lucide-react";
 
 const skills = [
   {
-    title: "Front-end",
-    description: "React, Next.js, TypeScript, Tailwind, accesibilidad y rendimiento.",
-    icon: Code2
+    title: "Psicoterapia individual",
+    description:
+      "Acompañamiento clínico para adolescentes y adultos desde un enfoque psicoanalítico y humanista.",
+    icon: Brain
   },
   {
-    title: "Back-end",
-    description: "Node.js, NestJS, GraphQL, microservicios, arquitectura hexagonal.",
-    icon: Database
+    title: "Evaluación psicodiagnóstica",
+    description:
+      "Aplicación e interpretación de pruebas proyectivas y psicométricas para comprender la subjetividad.",
+    icon: ClipboardList
   },
   {
-    title: "Producto",
-    description: "Discovery, métricas, experimentación, diseño centrado en las personas.",
-    icon: Sparkles
+    title: "Investigación académica",
+    description:
+      "Diseño de estudios sobre salud mental juvenil, cultura afectiva y dinámicas contemporáneas.",
+    icon: BookOpen
   },
   {
-    title: "DevOps",
-    description: "CI/CD, observabilidad, infraestructura como código, seguridad.",
-    icon: Layers3
+    title: "Formación y divulgación",
+    description:
+      "Facilitación de talleres psicoeducativos y espacios de reflexión con comunidades y organizaciones.",
+    icon: Users
   }
 ];
 
@@ -27,9 +31,9 @@ export default function Skills() {
   return (
     <section id="habilidades" className="section-container">
       <div className="mb-10 space-y-4 text-center">
-        <h2 className="text-3xl font-semibold text-slate-900 dark:text-white">Especialidades y habilidades</h2>
+        <h2 className="text-3xl font-semibold text-slate-900 dark:text-white">Áreas de acompañamiento</h2>
         <p className="text-slate-600 dark:text-slate-300">
-          Un stack multidisciplinar que combina estrategia, diseño y ejecución técnica de alto nivel.
+          Integrando investigación universitaria con práctica clínica para responder a los desafíos emocionales actuales.
         </p>
       </div>
       <div className="grid gap-6 md:grid-cols-2">
