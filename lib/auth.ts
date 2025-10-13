@@ -37,7 +37,7 @@ export function verifyToken(token: string): boolean {
   try {
     jwt.verify(token, JWT_SECRET);
     return true;
-  } catch (error) {
+  } catch {
     return false;
   }
 }

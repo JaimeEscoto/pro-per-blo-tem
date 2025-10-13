@@ -69,7 +69,7 @@ export async function supabaseRequest<T>(
     try {
       const errorPayload = (await response.json()) as SupabaseErrorPayload;
       details = errorPayload.message;
-    } catch (error) {
+    } catch {
       details = await response.text();
     }
     const message = details
