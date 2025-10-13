@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const post = await getPostBySlug(params.slug);
   if (!post) return { title: "Artículo no encontrado" };
   return {
-    title: `${post.title} | Blog de Ana Rodríguez`,
+    title: `${post.title} | Blog de Paola Madrid`,
     description: post.excerpt
   };
 }
@@ -57,7 +57,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <section className="mt-16 rounded-3xl bg-slate-100 p-8 dark:bg-slate-900/60">
         <h2 className="text-xl font-semibold text-slate-900 dark:text-white">¿Comentarios o preguntas?</h2>
         <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
-          Escríbeme a <a href="mailto:hola@anarodriguez.dev">hola@anarodriguez.dev</a> o comparte tus ideas en LinkedIn.
+          Escríbeme a <a href="mailto:contacto@paolamadridpsicologia.com">contacto@paolamadridpsicologia.com</a> o comparte tus ideas en LinkedIn.
         </p>
       </section>
     </article>

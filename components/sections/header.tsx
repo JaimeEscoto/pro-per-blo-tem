@@ -10,7 +10,7 @@ import clsx from "classnames";
 const navItems = [
   { href: "/#inicio", label: "Inicio" },
   { href: "/#sobre-mi", label: "Sobre mí" },
-  { href: "/#portafolio", label: "Portafolio" },
+  { href: "/#portafolio", label: "Líneas de trabajo" },
   { href: "/blog", label: "Blog" },
   { href: "/#contacto", label: "Contacto" }
 ];
@@ -40,7 +40,7 @@ export default function Header() {
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <Link href="/#inicio" className="text-lg font-semibold">
-          Ana Rodríguez · Ingeniería de Software
+          Paola Madrid · Psicología Clínica
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
           {navItems.map((item) => (

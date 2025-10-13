@@ -55,7 +55,7 @@ export default function AdminLoginPage() {
           </button>
           {error && <p className="text-center text-sm text-red-500">{error}</p>}
           <p className="text-center text-xs text-slate-500 dark:text-slate-400">
-            Tip: Usa <code>admin@anarodriguez.dev</code> y <code>SuperSegura!2024</code> en entornos locales.
+            Tip: Usa <code>admin@paolamadridpsicologia.com</code> y <code>SuperSegura!2024</code> en entornos locales.
           </p>
         </form>
       </div>

@@ -19,7 +19,7 @@ Configura las siguientes variables tanto en tu `.env.local` como en Render (`Env
 
 | Variable | Descripción | Ejemplo |
 | --- | --- | --- |
-| `ADMIN_EMAIL` | Usuario administrador para el panel. | `admin@anarodriguez.dev` |
+| `ADMIN_EMAIL` | Usuario administrador para el panel. | `admin@paolamadridpsicologia.com` |
 | `ADMIN_PASSWORD_HASH` | Hash SHA-256 de la contraseña. Generar con `echo -n "tuPassword" \| shasum -a 256`. | `bd881cdf358834e8bef278a51fdfa044a967bc0fa8233032190d4fbcd8238320` |
 | `JWT_SECRET` | Cadena aleatoria para firmar tokens JWT. | `cambia-esto-por-una-clave-segura` |
 | `SUPABASE_URL` | URL base del proyecto Supabase. | `https://tu-proyecto.supabase.co` |

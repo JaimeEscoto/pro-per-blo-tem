@@ -3,7 +3,7 @@ import Link from "next/link";
 import { getPosts } from "@/lib/posts";
 
 export const metadata = {
-  title: "Blog | Ana Rodríguez"
+  title: "Blog | Paola Madrid"
 };
 
 export default async function BlogPage() {
@@ -13,7 +13,7 @@ export default async function BlogPage() {
       <div className="space-y-4 text-center">
         <h1 className="text-4xl font-semibold text-slate-900 dark:text-white">Blog</h1>
         <p className="text-lg text-slate-600 dark:text-slate-300">
-          Ideas, aprendizajes y recursos prácticos para equipos de producto y tecnología.
+          Reflexiones sobre salud mental, psicoanálisis contemporáneo y herramientas para el acompañamiento comunitario.
         </p>
       </div>
       <div className="grid gap-8 md:grid-cols-3">

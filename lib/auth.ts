@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import crypto from "crypto";
 
-const DEFAULT_EMAIL = "admin@anarodriguez.dev";
+const DEFAULT_EMAIL = "admin@paolamadridpsicologia.com";
 const DEFAULT_PASSWORD_HASH = "bd881cdf358834e8bef278a51fdfa044a967bc0fa8233032190d4fbcd8238320";
 
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL ?? DEFAULT_EMAIL;

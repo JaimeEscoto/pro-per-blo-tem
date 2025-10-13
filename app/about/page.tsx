@@ -2,7 +2,7 @@ import About from "@/components/sections/about";
 import Skills from "@/components/sections/skills";
 
 export const metadata = {
-  title: "Sobre mí | Ana Rodríguez"
+  title: "Sobre mí | Paola Madrid"
 };
 
 export default function AboutPage() {

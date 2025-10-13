@@ -3,7 +3,7 @@ import Link from "next/link";
 import { getProjects } from "@/lib/projects";
 
 export const metadata = {
-  title: "Portafolio | Ana Rodríguez"
+  title: "Líneas de trabajo | Paola Madrid"
 };
 
 export default async function PortfolioPage() {
@@ -11,9 +11,9 @@ export default async function PortfolioPage() {
   return (
     <section className="section-container space-y-12">
       <div className="space-y-4 text-center">
-        <h1 className="text-4xl font-semibold text-slate-900 dark:text-white">Portafolio</h1>
+        <h1 className="text-4xl font-semibold text-slate-900 dark:text-white">Líneas de trabajo</h1>
         <p className="text-lg text-slate-600 dark:text-slate-300">
-          Una selección de productos digitales, plataformas SaaS y lanzamientos estratégicos.
+          Casos clínicos, investigaciones y dispositivos psicoeducativos que fortalecen la salud mental en Honduras y la región.
         </p>
       </div>
       <div className="grid gap-10 md:grid-cols-2">
@@ -42,12 +42,12 @@ export default async function PortfolioPage() {
                 </Link>
                 {project.links.demo && (
                   <Link href={project.links.demo} target="_blank" className="font-semibold">
-                    Ver demo
+                    Ver recurso
                   </Link>
                 )}
                 {project.links.github && (
                   <Link href={project.links.github} target="_blank" className="font-semibold">
-                    Repositorio
+                    Material complementario
                   </Link>
                 )}
               </div>
