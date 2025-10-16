@@ -7,13 +7,13 @@ export default function BlogPreview({ posts }: { posts: BlogPost[] }) {
     <section id="blog" className="section-container space-y-10">
       <div className="flex flex-col gap-4 text-center md:flex-row md:items-end md:justify-between md:text-left">
         <div>
-          <h2 className="text-3xl font-semibold text-slate-900 dark:text-white">Últimos artículos</h2>
+          <h2 className="text-3xl font-semibold text-slate-900 dark:text-white">Recursos para tu bienestar</h2>
           <p className="text-slate-600 dark:text-slate-300">
-            Reflexiones sobre ingeniería, cultura y liderazgo.
+            Contenido que responde a dudas frecuentes, comparte estrategias prácticas y fortalece tu camino terapéutico.
           </p>
         </div>
         <Link href="/blog" className="btn-secondary self-center md:self-end">
-          Ver blog completo
+          Ir al blog
         </Link>
       </div>
       <div className="grid gap-8 md:grid-cols-3">

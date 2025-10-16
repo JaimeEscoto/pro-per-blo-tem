@@ -1,39 +1,40 @@
-import { Brain, ClipboardList, BookOpen, Users } from "lucide-react";
+import Link from "next/link";
+import { HeartHandshake, HeartPulse, Leaf, Users2 } from "lucide-react";
 
 const skills = [
   {
-    title: "Psicoterapia individual",
+    title: "Ansiedad y autocuidado",
     description:
-      "Acompañamiento clínico para adolescentes y adultos desde un enfoque psicoanalítico y humanista.",
-    icon: Brain
+      "Identifica detonantes, fortalece recursos de afrontamiento y aprende a regular tus emociones con técnicas basadas en evidencia.",
+    icon: HeartPulse
   },
   {
-    title: "Evaluación psicodiagnóstica",
+    title: "Terapia de pareja",
     description:
-      "Aplicación e interpretación de pruebas proyectivas y psicométricas para comprender la subjetividad.",
-    icon: ClipboardList
+      "Reconstruye la comunicación, restablece la confianza y diseñen acuerdos que sostengan el vínculo desde la empatía.",
+    icon: HeartHandshake
   },
   {
-    title: "Investigación académica",
+    title: "Estrés laboral y burnout",
     description:
-      "Diseño de estudios sobre salud mental juvenil, cultura afectiva y dinámicas contemporáneas.",
-    icon: BookOpen
+      "Reordena tus límites, gestiona la sobrecarga y recupera el equilibrio entre productividad y bienestar personal.",
+    icon: Users2
   },
   {
-    title: "Formación y divulgación",
+    title: "Procesos de duelo y transición",
     description:
-      "Facilitación de talleres psicoeducativos y espacios de reflexión con comunidades y organizaciones.",
-    icon: Users
+      "Acompañamiento sensible para transitar pérdidas, cambios vitales o migraciones, integrando herramientas terapéuticas y rituales saludables.",
+    icon: Leaf
   }
 ];
 
 export default function Skills() {
   return (
-    <section id="habilidades" className="section-container">
+    <section id="servicios" className="section-container">
       <div className="mb-10 space-y-4 text-center">
-        <h2 className="text-3xl font-semibold text-slate-900 dark:text-white">Áreas de acompañamiento</h2>
+        <h2 className="text-3xl font-semibold text-slate-900 dark:text-white">Servicios especializados en línea</h2>
         <p className="text-slate-600 dark:text-slate-300">
-          Integrando investigación universitaria con práctica clínica para responder a los desafíos emocionales actuales.
+          Cada módulo terapéutico está diseñado para responder a necesidades concretas y ayudarte a tomar decisiones informadas sobre tu proceso.
         </p>
       </div>
       <div className="grid gap-6 md:grid-cols-2">
@@ -44,6 +45,11 @@ export default function Skills() {
             <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">{skill.description}</p>
           </article>
         ))}
+      </div>
+      <div className="mt-8 text-center">
+        <Link href="/services" className="btn-secondary">
+          Ver servicios y tarifas en detalle
+        </Link>
       </div>
     </section>
   );

@@ -54,11 +54,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
       )}
       <div dangerouslySetInnerHTML={{ __html: article.content }} />
-      <section className="mt-16 rounded-3xl bg-slate-100 p-8 dark:bg-slate-900/60">
-        <h2 className="text-xl font-semibold text-slate-900 dark:text-white">¿Comentarios o preguntas?</h2>
+      <section className="mt-16 rounded-3xl bg-slate-100 p-8 text-center dark:bg-slate-900/60">
+        <h2 className="text-xl font-semibold text-slate-900 dark:text-white">¿Este tema resuena contigo?</h2>
         <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
-          Escríbeme a <a href="mailto:contacto@paolamadridpsicologia.com">contacto@paolamadridpsicologia.com</a> o comparte tus ideas en LinkedIn.
+          Quizás sea momento de buscar apoyo profesional. Agenda tu sesión introductoria y construyamos un plan de acompañamiento adaptado a ti.
         </p>
+        <a href="/#contacto" className="btn-primary mt-4 inline-flex">
+          Agenda una consulta
+        </a>
       </section>
     </article>
   );

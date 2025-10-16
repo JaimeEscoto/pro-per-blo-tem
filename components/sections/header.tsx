@@ -9,8 +9,8 @@ import clsx from "classnames";
 
 const navItems = [
   { href: "/#inicio", label: "Inicio" },
-  { href: "/#sobre-mi", label: "Sobre mí" },
-  { href: "/#portafolio", label: "Líneas de trabajo" },
+  { href: "/#sobre-mi", label: "Sobre mí / Enfoque" },
+  { href: "/services", label: "Servicios" },
   { href: "/blog", label: "Blog" },
   { href: "/#contacto", label: "Contacto" }
 ];
@@ -40,7 +40,7 @@ export default function Header() {
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <Link href="/#inicio" className="text-lg font-semibold">
-          Paola Madrid · Psicología Clínica
+          Paola Madrid · Psicología en línea
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
           {navItems.map((item) => (
@@ -48,8 +48,14 @@ export default function Header() {
               {item.label}
             </Link>
           ))}
-          <Link href="/admin/login" className="rounded-full border border-slate-200 px-4 py-1 text-xs dark:border-slate-700">
-            Administrar
+          <Link href="/#contacto" className="btn-primary hidden text-xs md:inline-flex">
+            Agenda una consulta
+          </Link>
+          <Link
+            href="/client-area"
+            className="rounded-full border border-slate-200 px-4 py-1 text-xs hover:border-primary-500 hover:text-primary-500 dark:border-slate-700"
+          >
+            Iniciar sesión
           </Link>
           <ThemeToggle />
         </nav>
@@ -69,8 +75,11 @@ export default function Header() {
                   {item.label}
                 </Link>
               ))}
-              <Link href="/admin/login" className="text-sm font-semibold">
-                Administrar
+              <Link href="/#contacto" className="btn-primary text-center text-sm">
+                Agenda una consulta
+              </Link>
+              <Link href="/client-area" className="text-sm font-semibold">
+                Iniciar sesión
               </Link>
               <ThemeToggle />
             </div>
