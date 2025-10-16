@@ -7,20 +7,23 @@ export default function Hero() {
     <section id="inicio" className="section-container grid gap-12 md:grid-cols-[1.2fr_1fr] md:items-center">
       <div className="space-y-8">
         <span className="inline-flex items-center rounded-full bg-primary-100 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-primary-700 dark:bg-primary-900/40 dark:text-primary-200">
-          Psicoterapia · Psicoanálisis · Investigación
+          Psicología online con calidez humana
         </span>
         <h1 className="text-4xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
-          Acompaño procesos terapéuticos profundos con rigor clínico y una mirada humanista.
+          Encuentra el camino hacia tu bienestar emocional. Psicología profesional y confidencial en línea.
         </h1>
         <p className="text-lg text-slate-600 dark:text-slate-300">
-          Soy Paola Marielle Madrid Leiva, psicóloga formada en la UNAH. Investigo la subjetividad contemporánea y diseño espacios de escucha para adolescentes y adultos en Honduras y Centroamérica.
+          Soy Paola Marielle Madrid Leiva, psicóloga clínica y supervisora con más de 8 años de experiencia acompañando a personas que desean transformar ansiedad, estrés relacional y duelos en oportunidades de crecimiento.
+        </p>
+        <p className="text-base text-slate-600 dark:text-slate-300">
+          Atendemos sesiones privadas y seguras desde donde te encuentres. Cada proceso comienza con una entrevista diagnóstica que nos permite co-crear objetivos realistas y un plan terapéutico a tu medida.
         </p>
         <div className="flex flex-wrap items-center gap-4">
           <Link href="/#contacto" className="btn-primary">
             Agenda una consulta
           </Link>
-          <Link href="/portfolio" className="btn-secondary">
-            Conoce mis líneas de trabajo
+          <Link href="/about" className="btn-secondary">
+            Conoce mi enfoque
           </Link>
         </div>
         <div className="flex items-center gap-4 text-slate-600 dark:text-slate-300">

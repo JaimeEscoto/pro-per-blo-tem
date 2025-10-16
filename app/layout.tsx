@@ -8,9 +8,9 @@ import Footer from "@/components/sections/footer";
 const font = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-display" });
 
 export const metadata: Metadata = {
-  title: "Consulta Psicológica | Blog",
+  title: "Psicología en línea | Paola Madrid",
   description:
-    "Portal profesional de Paola Marielle Madrid Leiva: psicoterapia, investigación psicoanalítica y recursos de salud mental.",
+    "Terapia individual, de pareja y evaluaciones psicológicas en modalidad online. Agenda tu consulta y accede a recursos profesionales de bienestar emocional.",
   metadataBase: new URL("https://example.com")
 };
 
